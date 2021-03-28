@@ -182,6 +182,22 @@ class ControlPlayer(ControlBase, QFrame):
         self.video_index -= 20 * self.fps
         self.call_next_frame()
 
+    def jump_forward_two(self):
+        """
+        Jump 20 seconds forward.
+        :return:
+        """
+        self.video_index += 1 * self.fps
+        self.call_next_frame()
+
+    def jump_backward_two(self):
+        """
+        Jump 20 seconds backward.
+        :return:
+        """
+        self.video_index -= 1 * self.fps
+        self.call_next_frame()
+
     def back_one_frame(self):
         """
         Back one frame.
